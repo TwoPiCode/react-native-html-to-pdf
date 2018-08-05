@@ -52,10 +52,13 @@ var Example = React.createClass({
                                             => content width of 1008
                                     Default: 10
                                   */
+      base64: true               /* Optional: get the base64 PDF value
+                                    Default: false */
     };
 
-    RNHTMLtoPDF.convert(options).then((filePath) => {
-      console.log(filePath);
+    RNHTMLtoPDF.convert(options).then((data) => {
+      console.log(data.filePath);
+      console.log(data.base64);
     });
   },
 
